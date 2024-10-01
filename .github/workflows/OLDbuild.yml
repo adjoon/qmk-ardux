@@ -18,13 +18,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Cache - QMK Source
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-qmk_firmware
+        with:
+          path: /qmk_firmware
+          key: ${{ env.cache-name }}-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}
       - name: Update QMK Sources
         run: |
             if [ -d /qmk_firmware/.git ]; 
             then 
-                rm -rf /qmk_firmware;
+                cd /qmk_firmware;
+                git pull; 
+            else 
+                git clone --branch 0.18.5 https://github.com/qmk/qmk_firmware.git /qmk_firmware/; 
             fi
-            git clone --branch 0.18.5 https://github.com/qmk/qmk_firmware.git /qmk_firmware/; 
             if [ ! -d /qmk_firmware/keyboards/ardux ];
             then
                 ln -s "${GITHUB_WORKSPACE}/keyboards/ardux" /qmk_firmware/keyboards/ardux;
@@ -50,12 +59,12 @@ jobs:
       - name: Debug - ls build artifact folder
         run: ls /qmk_firmware/.build
       - name: Prep artifacts
-        run: cp /qmk_firmware/.build/crkbd_rev1_ardux.hex /qmk_firmware/.build/crkbd_rev1_ardux-40p.hex 
+        run: cp /qmk_firmware/.build/${{ matrix.layout }}_ardux.${{ matrix.fwext }} /qmk_firmware/.build/ardux-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.${{ matrix.fwext }} 
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: "crkbd_rev1_ardux-40p.hex"
-          path: "/qmk_firmware/.build/crkbd_rev1_ardux-40p.hex"
+          name: "ardux-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.${{ matrix.fwext }}"
+          path: "/qmk_firmware/.build/ardux-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.${{ matrix.fwext }}"
           if-no-files-found: error
           retention-days: 14
   release:
