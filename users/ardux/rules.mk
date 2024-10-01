@@ -15,7 +15,6 @@ VIA_ENABLE = no
 WPM_ENABLE = no
 ENCODER_ENABLE = no
 RGBLIGHT_ENABLE = no
-CONVERT_TO = promicro_rp2040
 
 ##########
 # Enable LTO if possible (graphics on avr mainly)
