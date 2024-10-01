@@ -1,6 +1,6 @@
 name: Build
 
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -14,7 +14,8 @@ jobs:
           - layout: ardux_thepaintbrush
             hand: left
             size: std
-            fwext: hex
+            fwext: uf2
+            extraflags: -e ARDUX_EXCLAMATION=KC_SCLN -e TAPPING_TERM=200 -e CONVERT_TO=promicro_rp2040
     steps:
       - name: Checkout
         uses: actions/checkout@v4
