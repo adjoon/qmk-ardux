@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: "ardux-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}-${{ matrix.fwext }}"
-          path: "/qmk_firmware/.build/*.${{ matrix.fwext }}"
+          path: "/qmk_firmware/.build/ardux-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}-${{ matrix.fwext }}"
           if-no-files-found: error
           retention-days: 14
   release:
