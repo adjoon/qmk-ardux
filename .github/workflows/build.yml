@@ -50,12 +50,12 @@ jobs:
       - name: Debug - ls build artifact folder
         run: ls /qmk_firmware/.build
       - name: Prep artifacts
-        run: cp /qmk_firmware/.build/crkbd_rev1_ardux.hex /qmk_firmware/.build/crkbd_rev1_ardux-40p.hex 
+        run: cp /qmk_firmware/.build/${{ matrix.layout }}_ardux.${{ matrix.fwext }} /qmk_firmware/.build/ardux-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.${{ matrix.fwext }} 
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: "crkbd_rev1_ardux-40p.hex"
-          path: "/qmk_firmware/.build/crkbd_rev1_ardux-40p.hex"
+          name: "ardux-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.${{ matrix.fwext }}"
+          path: "/qmk_firmware/.build/ardux-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.${{ matrix.fwext }}"
           if-no-files-found: error
           retention-days: 14
   release:
