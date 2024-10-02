@@ -1,7 +1,7 @@
 # adjoon's ardux remixing notes
 
 ## Directory Structure
-
+```
 remixes
 |   README.md
 |   remix_layers.h
@@ -15,7 +15,7 @@ remixes
         control.def
         layers.def
         symbols.def
-
+```
 ### remix_layers.h
 
 ### remix_shared_defines.h
