@@ -1,3 +1,9 @@
+# adjoon QMK ARDUX Fork
+
+This personal fork is set up to build ardux for a left handed paintbrush, compiling to .uf2 format (for RP2040 controllers).
+
+I'm working on my own remix which will implement a colemak inspired base layer, more ergonomics/efficiency oriented combos, and my own personalised nav/sym/num/etc layers.
+
 # QMK ARDUX Implementation
 
 This repo contains the [QMK](https://qmk.fm/) ARDUX implementation and pre-built firmware for boards that have been setup to use ARDUX by the core ARDUX development team.
