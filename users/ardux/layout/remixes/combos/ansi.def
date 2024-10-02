@@ -15,9 +15,9 @@ COMB(combo_dot,                      KC_DOT,                        KNUM_B1, KNU
 
 // adjoon custom letter combos definition
 //   NAME                            RESULT                         TRIGGER
-COMB(combo_b,                        KC_B,                          KEY_B1,                    KEY_B4)
-COMB(combo_c,                        KC_C,                          KEY_B1,  KEY_B2)
-//COMB(combo_n,                        KC_N,                                            KEY_B3,  KEY_B4)
+COMB(combo_b,                        KC_B,                          KEY_B4,                    KEY_B1)
+//COMB(combo_n,                        KC_N,                          KEY_B1,  KEY_B2)
+COMB(combo_c,                        KC_C,                                            KEY_B3,  KEY_B4)
 COMB(combo_f,                        KC_F,                          KEY_T1,  KEY_T2)
 COMB(combo_g,                        KC_G,                                   KEY_T2,  KEY_T3)
 COMB(combo_u,                        KC_U,                                   KEY_B2,  KEY_B3)
