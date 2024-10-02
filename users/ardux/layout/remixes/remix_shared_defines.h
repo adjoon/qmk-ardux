@@ -2,6 +2,8 @@
 
 // Disabling default combos
 #define DISABLE_DEFAULT_NUMBER_COMBOS
+#define DISABLE_DEFAULT_ALPHA_COMBOS
+#define DISABLE_DEFAULT_CONTROL_COMBOS
 
 // Colemak base keys
 #undef KEY_T1
