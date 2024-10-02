@@ -1,0 +1,11 @@
+// Copyright (c) 2022 purple-rw
+// SPDX-License-Identifier: Apache-2.0
+
+//   NAME                            RESULT                         TRIGGER
+COMB(combo_y,                        KC_Y,                          KEY_T1,           KEY_T3)
+
+COMB(combo_nine,                     KC_9,                          KNUM_T1, KNUM_T2)
+COMB(combo_seven,                    KC_7,                                   KNUM_T2, KNUM_T3)
+COMB(combo_eight,                    KC_8,                          KNUM_T1, KNUM_T2, KNUM_T3)
+COMB(combo_zero,                     KC_0,                                   KNUM_B2, KNUM_B3)
+COMB(combo_dot,                      KC_DOT,                        KNUM_B1, KNUM_B2)

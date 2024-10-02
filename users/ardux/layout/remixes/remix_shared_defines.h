@@ -1,5 +1,8 @@
 #define RIGHT_ANSI_SIX_THREE KC_QUOT,
 
+// Disabling default combos
+#define DISABLE_DEFAULT_NUMBER_COMBOS
+
 // Colemak base keys
 #undef KEY_T1
 #undef KEY_T2
