@@ -5,3 +5,10 @@
 COMB(combo_num_period,                   KC_DOT,                        KC_1, KC_5)
 COMB(combo_num_comma,                    KC_COMM,                       KC_1, KC_6)
 COMB(combo_num_enter,                    KC_ENT,                        KC_1, KC_4)
+
+//   NAME                            RESULT                         TRIGGER
+COMB(combo_period,                   KC_DOT,                        KEY_B2, KEY_T1)
+COMB(combo_comma,                    KC_COMM,                       KEY_B3,         KEY_T1)
+COMB(combo_slash,                    KC_SLSH,                       KEY_B4,                 KEY_T3)
+COMB(combo_exclamation,              ARDUX_EXCLAMATION,                            KEY_T3, KEY_B3)
+COMB(combo_single_quote,             KC_QUOT,                       KEY_B3, KEY_B2, KEY_T1)
