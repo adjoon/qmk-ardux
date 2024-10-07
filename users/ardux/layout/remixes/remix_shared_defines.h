@@ -15,7 +15,7 @@
 #undef KEY_B2
 #undef KEY_B3
 #undef KEY_B4
-#define KEY_B4 LT(LAYER_ID_CUSTOM, KC_A)
+#define KEY_B4 LT(LAYER_ID_CUSTOM, KC_SPACE)
 #define KEY_B3 KC_R
 #define KEY_B2 KC_E
 #define KEY_B1 LT(LAYER_ID_SYMBOLS, KC_T)

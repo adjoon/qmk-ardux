@@ -28,7 +28,7 @@ COMB(combo_dot,                      KC_DOT,                        KNUM_B1, KNU
 
 //   NAME                            RESULT                         TRIGGER
 COMB(combo_h,                        KC_H,                                   KEY_B3,  KEY_B2)
-//COMB(combo_l,                        KC_L,                                            KEY_B2,  KEY_B1)
+COMB(combo_a,                        KC_A,                                            KEY_B2,  KEY_B1)
 COMB(combo_u,                        KC_U,                                   KEY_T3,  KEY_T2)
 COMB(combo_l,                        KC_L,                                            KEY_T2,  KEY_T1)
 COMB(combo_d,                        KC_D,                                   KEY_B3,           KEY_B1)
