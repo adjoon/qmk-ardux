@@ -72,12 +72,3 @@ KCTRL_T4,          KCTRL_T3,          KCTRL_T2,          KCTRL_T1,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
 KCTRL_B4,          KCTRL_B3,          KCTRL_B2,          KCTRL_B1           \
 STD_TRAILING_NONES
-
-
-
-// #define ARDUX_ADJ_LAYER_CUS_LEFT \
-// STD_LEADING_NONES \
-// KC_NO,            KC_VOLU,          KC_INS,           KC_MUTE,          \
-// STD_BETWEEN_ROW_ONE_TWO_NONES \
-// KC_TRNS,          KC_VOLD,          KC_PSCR,          KC_RSFT           \
-// STD_TRAILING_NONES
