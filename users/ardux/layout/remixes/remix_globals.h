@@ -3,4 +3,4 @@
 // define my own board.json to enable layer name customisation
 
 // include this here because _layout.h won't get it after .yaml change
-#include "boards/ardux_thepaintbrush.h"
+#include "boards/ardux_adjoon8k.h"
