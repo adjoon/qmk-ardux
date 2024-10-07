@@ -1,0 +1,14 @@
+{
+    "keyboard": "ardux/thepaintbrush",
+    "keymap": "ardux",
+    "layout": "LAYOUT_ardux_wrapper",
+    "layers": [
+        [ "ARDUX_STD_LAYER_BASE" ],
+        [ "ARDUX_STD_LAYER_NUM" ],
+        [ "ARDUX_STD_LAYER_SYM" ],
+        [ "ARDUX_STD_LAYER_PAR" ],
+        [ "ARDUX_STD_LAYER_NAV" ],
+        [ "ARDUX_STD_LAYER_CUS" ],
+        [ "ARDUX_STD_LAYER_MSE" ]
+    ]
+}

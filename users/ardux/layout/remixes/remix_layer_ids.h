@@ -2,25 +2,23 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // Base layer ids
-// #undef LAYER_ID_BASE
-// #undef LAYER_ID_NUMBERS
-// #undef LAYER_ID_SYMBOLS
-// #undef LAYER_ID_PARENTHETICALS
-// #undef LAYER_ID_NAVIGATION
-// #undef LAYER_ID_CUSTOM
-// #undef LAYER_ID_MOUSE
-// #undef LAYER_ID_BIG_SYM
-// #undef LAYER_ID_BIG_FUN
+#undef LAYER_ID_BASE
+#undef LAYER_ID_NUMBERS
+#undef LAYER_ID_SYMBOLS
+#undef LAYER_ID_PARENTHETICALS
+#undef LAYER_ID_NAVIGATION
+#undef LAYER_ID_CUSTOM
+#undef LAYER_ID_MOUSE
+#undef LAYER_ID_BIG_SYM
+#undef LAYER_ID_BIG_FUN
 
-// #define LAYER_ID_BASE 0
-// #define LAYER_ID_NUMBERS 1
-// #define LAYER_ID_SYMBOLS 2
-// #define LAYER_ID_PARENTHETICALS 3
-// #define LAYER_ID_NAVIGATION 4
-// #define LAYER_ID_CUSTOM 5
-// #define LAYER_ID_MOUSE 6
-// #define LAYER_ID_BIG_SYM 7
-// #define LAYER_ID_BIG_FUN 8
+#define LAYER_ID_BASE 0
+#define LAYER_ID_NUMBERS 1
+#define LAYER_ID_SYMBOLS 2
+#define LAYER_ID_PARENTHETICALS 3
+#define LAYER_ID_NAVIGATION 4
+#define LAYER_ID_CUSTOM 5
+#define LAYER_ID_MOUSE 6
 
 
 // Additional custom layers
