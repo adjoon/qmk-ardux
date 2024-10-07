@@ -76,7 +76,7 @@
 #define AKEYS_T4 KC_PSCR
 
 // Defining my CTRL layer keys
-#define KCTRL_B4 MT(LSFT, LCTL(KC_Y))
+#define KCTRL_B4 MT(KC_LSFT, LCTL(KC_Y))
 #define KCTRL_B3 KC_TRNS
 #define KCTRL_B2 LCTL(KC_Z)
 #define KCTRL_B1 LCTL(KC_X)

@@ -140,3 +140,5 @@ You can open each of these to see the inputs they define. If you want to change 
 
 In order to make this work, you must define the flag to 'DISABLE_DEFAULT_XXXX_COMBOS' specified in the base .def file. You can add this to your remix_shared_defines.h file. (There are probably plenty of other places you could define it instead but this makes sense to me)
 
+## /users/ardux/oled/oled.c
+Sets up OLED behaviour - haven't touched this yet, not sure about remixing it or if you just have to overwrite. Has caused at least one headache by expecting things to be defined which I had overwritten while remixing. Pay attention to layer_ids. 
