@@ -115,6 +115,9 @@ Therefore the full chain goes:
 Does layer order actually matter?
 Usually with QMK there is some value to layer order when using KC_TRNS (transparent keys) on multiple layers, and it limits which layers can be accessed from others (eg if you want to toggle a layer on to effectively switch to it, it needs to be above the current layer).
 
+### Setting up custom layers
+IDK HOW
+
 ### remix_combos.def
 Looks like a file where you define extra .def files in /remixes/combos/ - seen in purple_rw repo, haven't found the include for it in the base files yet.
 

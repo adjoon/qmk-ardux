@@ -11,8 +11,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # - layout: ardux_thepaintbrush
-          - layout: ardux_adjoon8k
+          - layout: ardux_thepaintbrush
             hand: left
             size: std
             fwext: uf2
