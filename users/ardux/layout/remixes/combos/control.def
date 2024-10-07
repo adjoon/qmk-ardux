@@ -12,10 +12,10 @@ COMB(combo_delete_base,              KC_DEL,                                 KEY
 COMB(combo_tab_base,                 KC_TAB,                        KEY_T1,  KEY_T2,  KEY_T3,  KEY_B4)
 //COMB(combo_space_base,               KC_SPACE,                                        KEY_B2,  KEY_B1)
 
-COMB(combo_backspace_nav,            KC_BSPC,                       KNAV_B1, KNAV_T2)
-COMB(combo_delete_nav,               KC_DEL,                                 KNAV_B3, KNAV_T2)
-COMB(combo_tab_nav,                  KC_TAB,                        KNAV_T1, KNAV_T2, KNAV_T3, KNAV_B4)
-//COMB(combo_space_nav,                KC_SPACE,                                        KNAV_B2, KNAV_B1)
+COMB(combo_backspace_NUMLOCK,            KC_BSPC,                       KNMLK_B1, KNMLK_T2)
+COMB(combo_delete_NUMLOCK,               KC_DEL,                                 KNMLK_B3, KNMLK_T2)
+// COMB(combo_tab_NUMLOCK,                  KC_TAB,                        KNMLK_T1, KNMLK_T2, KNMLK_T3, KNMLK_B4)
+// COMB(combo_space_NUMLOCK,                KC_SPACE,               KNMLK_B4, KNMLK_B3, KNMLK_B2, KNMLK_B1)
 
 COMB(combo_backspace_num,            KC_BSPC,                       KNUM_B1, KNUM_T2)
 COMB(combo_delete_num,               KC_DEL,                                 KNUM_B3, KNUM_T2)

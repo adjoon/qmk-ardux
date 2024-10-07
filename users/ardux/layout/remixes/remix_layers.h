@@ -31,11 +31,11 @@ STD_TRAILING_NONES
 
 
 
-#define ARDUX_ADJ_LAYER_NAV_LEFT \
+#define ARDUX_ADJ_LAYER_NUMLOCK_LEFT \
 STD_LEADING_NONES \
-KNAV_T4,          KNAV_T3,          KNAV_T2,          KNAV_T1,          \
+KNMLK_T4,          KNMLK_T3,          KNMLK_T2,          KNMLK_T1,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KNAV_B4,          KNAV_B3,          KNAV_B2,          KNAV_B1           \
+KNMLK_B4,          KNMLK_B3,          KNMLK_B2,          KNMLK_B1           \
 STD_TRAILING_NONES
 
 
@@ -49,11 +49,11 @@ STD_TRAILING_NONES
 
 
 
-#define ARDUX_ADJ_LAYER_CUS_LEFT \
+#define ARDUX_ADJ_LAYER_AKEYS_LEFT \
 STD_LEADING_NONES \
-KC_NO,            KC_VOLU,          KC_INS,           KC_MUTE,          \
+AKEYS_T4,            AKEYS_T3,          AKEYS_T2,           AKEYS_T1,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_TRNS,          KC_VOLD,          KC_PSCR,          KC_RSFT           \
+AKEYS_B4,          AKEYS_B3,          AKEYS_B2,          AKEYS_B1           \
 STD_TRAILING_NONES
 
 
@@ -64,3 +64,20 @@ KMSE_T4,          KMSE_T3,          KMSE_T2,          KMSE_T1,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
 KMSE_B4,          KMSE_B3,          KMSE_B2,          KMSE_B1           \
 STD_TRAILING_NONES
+
+
+#define ARDUX_ADJ_LAYER_CTRL_LEFT \
+STD_LEADING_NONES \
+KCTRL_T4,          KCTRL_T3,          KCTRL_T2,          KCTRL_T1,          \
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KCTRL_B4,          KCTRL_B3,          KCTRL_B2,          KCTRL_B1           \
+STD_TRAILING_NONES
+
+
+
+// #define ARDUX_ADJ_LAYER_CUS_LEFT \
+// STD_LEADING_NONES \
+// KC_NO,            KC_VOLU,          KC_INS,           KC_MUTE,          \
+// STD_BETWEEN_ROW_ONE_TWO_NONES \
+// KC_TRNS,          KC_VOLD,          KC_PSCR,          KC_RSFT           \
+// STD_TRAILING_NONES

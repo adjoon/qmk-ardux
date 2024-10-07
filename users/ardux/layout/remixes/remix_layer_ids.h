@@ -16,9 +16,10 @@
 #define LAYER_ID_NUMBERS 1
 #define LAYER_ID_SYMBOLS 2
 #define LAYER_ID_PARENTHETICALS 3
-#define LAYER_ID_NAVIGATION 4
-#define LAYER_ID_CUSTOM 5
+#define LAYER_ID_NUMLOCK 4
+#define LAYER_ID_AKEYS 5
 #define LAYER_ID_MOUSE 6
+#define LAYER_ID_CTRL 7
 
 
 // Additional custom layers

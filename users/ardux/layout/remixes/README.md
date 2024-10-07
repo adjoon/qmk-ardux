@@ -121,6 +121,10 @@ IDK HOW
 ### remix_combos.def
 Looks like a file where you define extra .def files in /remixes/combos/ - seen in purple_rw repo, haven't found the include for it in the base files yet.
 
+Edit: it is included by `/users/ardux/combos.def`
+
+Also I should define `DISABLE_ALL_DEFAULT_COMBOS` instead of defining all the disables individually, and then just include my combo .defs from `remix_combos.def` instead of using the base ones.
+
 ### 📂 combos
 Contains .def files - these are created with whatever name you want? so you can organise combos you add by different files.
 

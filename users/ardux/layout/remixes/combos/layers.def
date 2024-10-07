@@ -1,6 +1,14 @@
 // Copyright (c) 2021 Mike "KemoNine" Crosson
 // SPDX-License-Identifier: Apache-2.0
 
+// BASE ARDUX
+COMB(combo_layer_baseNUMLOCK,            TG(LAYER_ID_NUMLOCK),       KEY_B1,  KEY_T2,  KEY_B3)
+COMB(combo_layer_NUMLOCKbase,            TG(LAYER_ID_NUMLOCK),       KNMLK_B1, KNMLK_T2, KNMLK_B3)
+COMB(combo_layer_basemse,            TG(LAYER_ID_MOUSE),            KEY_T1,  KEY_B2,  KEY_T3)
+COMB(combo_layer_msebase,            TG(LAYER_ID_MOUSE),            KMSE_T1, KMSE_B2, KMSE_T3)
+
+
+
 //   NAME                            RESULT                         TRIGGER
 // COMB(combo_layer_basemse_kmn,        TG(LAYER_ID_MOUSE),            KC_HOME, KC_DOWN, KC_END)
 // COMB(combo_layer_basemse_adj,        TG(LAYER_ID_MOUSE),            KC_HOME, KC_DOWN, KC_END)

@@ -7,8 +7,9 @@
         [ "ARDUX_ADJ_LAYER_NUM" ],
         [ "ARDUX_ADJ_LAYER_SYM" ],
         [ "ARDUX_ADJ_LAYER_PAR" ],
-        [ "ARDUX_ADJ_LAYER_NAV" ],
-        [ "ARDUX_ADJ_LAYER_CUS" ],
-        [ "ARDUX_ADJ_LAYER_MSE" ]
+        [ "ARDUX_ADJ_LAYER_NUMLOCK" ],
+        [ "ARDUX_ADJ_LAYER_AKEYS" ],
+        [ "ARDUX_ADJ_LAYER_MSE" ],
+        [ "ARDUX_ADJ_LAYER_CTRL" ]
     ]
 }

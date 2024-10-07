@@ -10,6 +10,14 @@ COMB(combo_eight,                    KC_8,                          KNUM_T1, KNU
 COMB(combo_zero,                     KC_0,                                   KNUM_B2, KNUM_B3)
 COMB(combo_dot,                      KC_DOT,                        KNUM_B1, KNUM_B2)
 
+// again for NUMLOCK layer
+//   NAME                            RESULT                         TRIGGER
+COMB(combo_NUMLOCK_nine,             KC_9,                          KNMLK_T1, KNMLK_T2)
+COMB(combo_NUMLOCK_seven,            KC_7,                                   KNMLK_T2, KNMLK_T3)
+COMB(combo_NUMLOCK_eight,            KC_8,                          KNMLK_T1, KNMLK_T2, KNMLK_T3)
+COMB(combo_NUMLOCK_zero,             KC_0,                                   KNMLK_B2, KNMLK_B3)
+COMB(combo_NUMLOCK_dot,              KC_DOT,                        KNMLK_B1, KNMLK_B2)
+
 
 // Layout Cheatsheet
 //
