@@ -3,18 +3,24 @@
 ## Directory Structure WIP
 ```
 remixes
-│   remix_layers.h
-│   remix_shared_defines.h
+│   README.md
+│   remix_combos.def
 │   remix_globals.h
-|
+│   remix_layers.h
+│   remix_layer_ids.h
+│   remix_shared_defines.h
+│
 └───combos
+        adj_nav.def
+        ansi.def
         control.def
         layers.def
+        mods.def
         symbols.def
 ```
 ### remix_globals.h
-Instructed to include in `/layout/_layout.h`
-Not sure what it's used for yet.
+Instructed to include in `/layout/_layout.h`.
+Earliest to be included remix file that I know of, which makes it useful for defining custom parameters.
 
 ### remix_layers.h
 Used to define layouts of alternate layers. Included by the base file `/layout/layers.h`.
@@ -110,23 +116,36 @@ Therefore the full chain goes:
 - `_layout.h`                   says `ARDUX_STD_LAYER_PAR` = `ARDUX_STD_LAYER_PAR_LEFT`
 - `layers.h`                    defines the layout of `ARDUX_STD_LAYER_PAR_LEFT`
 
-#### More on remix_layer_ids.h
+#### More on remix_layer_ids.h and the .json layer order
 
 Does layer order actually matter?
 Usually with QMK there is some value to layer order when using KC_TRNS (transparent keys) on multiple layers, and it limits which layers can be accessed from others (eg if you want to toggle a layer on to effectively switch to it, it needs to be above the current layer).
 
 ### Setting up custom layers
-IDK HOW
+See chain explained above, each of the files will have to be changed to match.
+- `remix_shared_defines.h` (or elsewhere with combos etc eg `/remixes/combos/layers.def`) - call for the LAYER_ID_\<NAME\> as you have defined in
+- `remix_layer_ids.h` which replaces `layer_ids.h` - match the id number to the order of layers in the .json
+- `.json` - can change the names and order of layers in here
+- use `remix_globals.h` to make the equivalent definitions to those in `_layout.h` - I recommend using your own custom names to avoid variable conflicts
+- define your desired layout in `remix_layers.h` with the handed-specific name you defined in `remix_globals.h`
+
+Refer to my files for a working example. This does mean changing one file outside the remix directory, `ardux_thepaintbrush.json` (or whatever your .json is). Probably there is a way to get around this, but I had a go and was unsuccessful, decided just changing the .json was easier.
+
+**⚠ IF YOU DEFINE YOUR OWN CUSTOM LAYER NAMES/ID SYSTEM ⚠**: 
+
+you will first undefine the base set in `remix_layer_ids.h` before you define your own. 
+
+**_HOWEVER,_** make sure that after all your desired layers are defined, you redefine any missing LAYER_ID_\<NAME\>s from the base set, otherwise you will encounter issues from the default oled programming, which is looking for those ID variables.
+
+I have not looked much further into the oled behaviour, as I do not currently have one installed on my board, but it seems to lack remix implementation, so the files would probably have to be changed directly. The key file to look into should be `/users/ardux/oled/oled.c`.
 
 ### remix_combos.def
-Looks like a file where you define extra .def files in /remixes/combos/ - seen in purple_rw repo, haven't found the include for it in the base files yet.
+Seems to be intended as the file to include .def files in `/remixes/combos/`. Additional .def files in the remix should be included here. This file is included by `/users/ardux/combos.def`.
 
-Edit: it is included by `/users/ardux/combos.def`
+If you use `DISABLE_ALL_DEFAULT_COMBOS` instead of defining the disables for each base combo group individually (see section below), then you will need to include the combo .defs based on the base files here as well. (Because the `DISABLE_ALL_DEFAULT_COMBOS` totally prevents the inclusion of the base file, whereas the individual group disables just prevent the definitions withing the base file, which then includes its corresponding remix file after)
 
-Also I should define `DISABLE_ALL_DEFAULT_COMBOS` instead of defining all the disables individually, and then just include my combo .defs from `remix_combos.def` instead of using the base ones.
-
-### 📂 combos
-Contains .def files - these are created with whatever name you want? so you can organise combos you add by different files.
+### 📂 /combos/
+Contains .def files - these are created with whatever name you want, so you can organise combos you add by different files.
 
 However, there are a set of combos files existing in the base ardux, these are:
 ```
@@ -138,7 +157,15 @@ However, there are a set of combos files existing in the base ardux, these are:
 ```
 You can open each of these to see the inputs they define. If you want to change these inputs, create a .def file with the same name in /remixes/combos/ directory. You can copy the structure from the base .def file. The base .def specifies to include the equivalent remix .def file if it exists.
 
-In order to make this work, you must define the flag to 'DISABLE_DEFAULT_XXXX_COMBOS' specified in the base .def file. You can add this to your remix_shared_defines.h file. (There are probably plenty of other places you could define it instead but this makes sense to me)
+In order to replace these successfully, you must define the flag to 'DISABLE_DEFAULT_XXXX_COMBOS' specified in the base .def file. You can do this in your `remix_shared_defines.h` file. (There are probably other places you could define it instead but this makes sense to me)
+
+Alternatively, see below, we can disable all the base combo files at once. In that case we would need to manually include any of our remix combos using `remix_combos.def`. 
+
+## /users/ardux/combos.def
+Also (as does `layers.h`) includes `shared_defines.h` and `remix_shared_defines.h`. Includes all the default combo.def files from `/layout/combos/` conditionally, checks if defined 'DISABLE_ALL_DEFAULT_COMBOS' to override this.
+This way we could override all the default combos in one go, instead of using 5 different flags. 
+
+Not sure at what point this is included, but it itself includes `remix_shared_defines.h` before checking the default combos, so again that is where I would put the above flag.
 
 ## /users/ardux/oled/oled.c
-Sets up OLED behaviour - haven't touched this yet, not sure about remixing it or if you just have to overwrite. Has caused at least one headache by expecting things to be defined which I had overwritten while remixing. Pay attention to layer_ids. 
+Sets up OLED behaviour - haven't touched this yet, not sure about remixing it or if you just have to overwrite. Has caused at least one headache by expecting things to be defined which I had overwritten while remixing. Pay attention to layer_ids.

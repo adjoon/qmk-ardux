@@ -1,2 +1,7 @@
 // include my own custom combos files
 #include "combos/adj_nav.def"
+#include "combos/ansi.def"
+#include "combos/control.def"
+#include "combos/layers.def"
+#include "combos/mods.def"
+#include "combos/symbols.def"

@@ -2,7 +2,42 @@
 
 This personal fork is set up to build ardux for a left handed paintbrush, compiling to .uf2 format (for RP2040 controllers).
 
-I'm working on my own remix which will implement a colemak inspired base layer, more ergonomics/efficiency oriented combos, and my own personalised nav/sym/num/etc layers.
+It includes my own personal remix files, which are still somewhat WIP, but should be working at least. 
+
+My remix implements a new base layer, based on a comment from purple_rw, which is supposed to reduce SFB, with my own modification to move space to the base layer.
+```
+  O    N    I    S
+Space  R    E    T
+```
+The remix also implements my own custom combos for the rest of the alpha keys. Layout map coming soon™.
+
+These combos are roughly based on matching the easiest to input combos with the most frequent English letters. Additionally, I matched combo placement on the top vs bottom row with the placement of the key on the base colemak layout, which I found made things more intuitive to pick up, without having to compromise much on the ergonomics.
+
+Beyond that, I am in the process of implementing my own custom num/sym/nav etc layers, but these are still a WIP. 
+
+## Compiling to .uf2 and forking this repo
+I think the main change to make this work was just to the .yaml in the `.github/workflows/` directory. If you are building your own RP2040 paintbrush, you might be able to just copy my .yaml to get it working.
+
+Feel free to fork this whole repo as a jumping off point for your own remix. Ideally when remixing, all changes are contained within the remixes folder, so you should be able to just gitignore/remove the whole `/users/ardux/layout/remixes/` folder to return to a vanilla implementation. **HOWEVER,** this repo also currently contains modification to the `/users/ardux/layout/ardux_thepaintbrush.json` file. To restore to vanilla, remove or rename this file and replace it with the `ardux_thepaintbrush_ORIGINAL.json` I preserved in the same folder.
+
+## More remixing info
+I have been working on notes about the remixing process as I go, these are found in the [`/users/ardux/layout/remixes/README.md`](/users/ardux/layout/remixes/README.md).
+
+## Personal thoughts
+
+### Background about the base layer changes
+My original plan was a fully colemak inspired base layer of
+```
+O I E N
+A R S T
+```
+(left handed), but I found the muscle memory a bit uncanny, and decided to try something more distinct. One factor that was confusing was the fact that I was pressing eg both 'T' and 'N' with the same order of finger as usual, but on two different rows. Because my left hand naturally mirrored the muscle memory to hit the right hand homerow keys, as well as the usual left hand ones, it started getting confused which row it was on.
+
+This new layout broke up all the same finger pairs from the original homerow, and is helping me build a distinct muscle memory for the ardux board.
+
+Moving space to the base layer makes sense for typing since space is essentially in every word. For my intended use case it may not be as important, but I am doing typing practice to build familiarity with the layout, and hitting a combo for space after every single word just didn't make sense.
+
+
 
 # QMK ARDUX Implementation
 
